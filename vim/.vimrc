@@ -1,5 +1,3 @@
-# Vim configuration
-
 syntax on
 
 set number
