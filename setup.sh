@@ -5,10 +5,23 @@ set -o pipefail
 set -o nounset
 
 
+
+function setup_vim() {
+	echo "Setting up vim..."
+	cp -a vim/. ~/
+}
+
+function setup_font() {
+	# Installing Iosevka font (https://github.com/be5invis/Iosevka)
+
+	echo "Installing Iosevka font..."
+	brew tap homebrew/cask-fonts
+	brew install --cask font-iosevka
+}
+
+
 echo "Setting up the environment..."
-
-echo "Setting up vim..."
-
-cp -a vim/. ~/
-
+setup_vim()
+setup_font()
 echo "Done!"
+
