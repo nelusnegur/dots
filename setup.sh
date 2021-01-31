@@ -8,7 +8,7 @@ set -o nounset
 
 function setup_vim() {
 	echo "Setting up vim..."
-	cp -a vim/. ~/
+	cp -a editor/vim/. ~/
 }
 
 function setup_font() {
