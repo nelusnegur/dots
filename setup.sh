@@ -6,12 +6,12 @@ set -o nounset
 
 
 
-function setup_vim() {
+function set_up_vim() {
 	echo "Setting up vim..."
 	cp -a editor/vim/. ~/
 }
 
-function setup_font() {
+function set_up_font() {
 	# Installing Iosevka font (https://github.com/be5invis/Iosevka)
 
 	echo "Installing Iosevka font..."
@@ -21,7 +21,7 @@ function setup_font() {
 
 
 echo "Setting up the environment..."
-setup_vim()
-setup_font()
+set_up_vim()
+set_up_font()
 echo "Done!"
 
