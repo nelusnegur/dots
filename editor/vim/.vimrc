@@ -10,6 +10,11 @@ set incsearch
 set ignorecase
 set smartcase
 set gdefault
+set hlsearch
+
+" Disable hlsearch with Ctrl-h
+vnoremap <C-h> :nohlsearch<cr>
+nnoremap <C-h> :nohlsearch<cr>
 
 set showmode
 set showcmd
