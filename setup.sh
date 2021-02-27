@@ -34,6 +34,9 @@ function set_up_tmux() {
 	brew install tmux
 
 	cp -a shell/tmux/. ~/
+
+	echo "Installing tmux plugin manager..."
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 }
 
 function set_up_shell() {
