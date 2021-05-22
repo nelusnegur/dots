@@ -44,11 +44,17 @@ function set_up_shell() {
 	set_up_tmux()
 }
 
+function set_up_git() {
+	echo "Setting up git..."
+	cp -a git/.gitconfig ~/
+}
+
 
 echo "Setting up the environment..."
 
 set_up_vim()
 set_up_font()
 set_up_shell()
+set_up_git()
 
 echo "Done!"

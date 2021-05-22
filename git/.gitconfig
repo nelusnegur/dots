@@ -1,0 +1,12 @@
+[user]
+	name = Nelu Snegur
+	email = nelu.snegur@pulsarplanet.com
+[pull]
+	ff = only
+[core]
+	autocrlf = input
+	safecrlf = true
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = main
