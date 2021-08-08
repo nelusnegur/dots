@@ -39,9 +39,14 @@ function set_up_tmux() {
 	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 }
 
+function set_up_terminal() {
+	cp -a shell/alacritty/alacritty.yml ~/.config/alacritty
+}
+
 function set_up_shell() {
 	set_up_zshell()
 	set_up_tmux()
+	set_up_terminal()
 }
 
 function set_up_git() {
@@ -56,5 +61,6 @@ set_up_vim()
 set_up_font()
 set_up_shell()
 set_up_git()
+
 
 echo "Done!"
