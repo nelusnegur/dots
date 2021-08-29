@@ -51,7 +51,7 @@ function set_up_shell() {
 
 function set_up_git() {
 	echo "Setting up git..."
-	cp -a git/.gitconfig ~/
+	cp -a git/{.gitconfig, .gitignore} ~/
 }
 
 
