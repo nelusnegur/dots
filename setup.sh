@@ -6,9 +6,11 @@ set -o nounset
 
 
 
-function set_up_vim() {
-	echo "Setting up vim..."
-	cp -a editor/vim/. ~/
+function set_up_nvim() {
+	echo "Setting up nvim..."
+	brew install neovim
+	rm -rf ~/.config/nvim/
+	cp -a editor/nvim/. ~/.config/nvim
 }
 
 function set_up_font() {
@@ -57,7 +59,7 @@ function set_up_git() {
 
 echo "Setting up the environment..."
 
-set_up_vim()
+set_up_nvim()
 set_up_font()
 set_up_shell()
 set_up_git()
