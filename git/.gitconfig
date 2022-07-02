@@ -7,6 +7,7 @@
 	autocrlf = input
 	safecrlf = true
 	excludesfile = ~/.gitignore
+	editor = nvim
 [commit]
 	gpgsign = true
 [init]
