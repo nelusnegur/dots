@@ -59,6 +59,9 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope.nvim"
   use "nvim-telescope/telescope-ui-select.nvim"
 
+  -- Trouble
+  use "folke/trouble.nvim"
+
   -- Autopairs (), [], {}
   use "windwp/nvim-autopairs"
 
