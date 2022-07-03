@@ -4,9 +4,12 @@ abbr -a m make
 abbr -a k kubectl
 abbr -a g git
 abbr -a gst 'git status'
-abbr -a gck 'git checkout'
+abbr -a gd 'git diff'
+abbr -a glo 'git log --oneline'
+abbr -a gco 'git checkout'
 abbr -a ga 'git add -p'
-abbr -a gc 'git commit'
+abbr -a gc 'git commit -v'
+abbr -a gc! 'git commit -v --amend'
 abbr -a gl 'git pull'
 abbr -a gp 'git push'
 
