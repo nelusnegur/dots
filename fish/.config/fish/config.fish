@@ -17,6 +17,9 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+set -gx EDITOR nvim
+set -gx VISUAL $EDITOR
+set -gx RUST_BACKTRACE 1
 
 # Fish git prompt
 set __fish_git_prompt_showuntrackedfiles 'yes'
@@ -46,9 +49,7 @@ function fish_prompt
 end
 
 
-set PATH /usr/local/opt/ruby/bin \
-   /Users/nelusnegur/.gem/ruby/3.0.0/bin $PATH
+set PATH ~/.cargo/bin \
+   /usr/local/opt/ruby/bin \
+   ~/.gem/ruby/3.0.0/bin $PATH
 
-# Ensure that nvim is set as the default editor
-set -gx EDITOR nvim
-set -gx VISUAL $EDITOR
