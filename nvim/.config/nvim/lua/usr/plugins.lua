@@ -101,6 +101,12 @@ return packer.startup(function(use)
   }
   use "nvim-treesitter/playground"
 
+  -- Markdown preview
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
+
   -- Rust tools
   use "simrat39/rust-tools.nvim"
 
