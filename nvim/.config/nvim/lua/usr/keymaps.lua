@@ -47,8 +47,6 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
-
--- Move text up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
@@ -78,3 +76,12 @@ keymap("n", "<leader>xd", "<cmd>Trouble document_diagnostics<cr>", opts)
 keymap("n", "<leader>xl", "<cmd>Trouble loclist<cr>", opts)
 keymap("n", "<leader>xq", "<cmd>Trouble quickfix<cr>", opts)
 keymap("n", "gR", "<cmd>Trouble lsp_references<cr>", opts)
+
+-- Navigate tabs
+keymap("n", "<leader>ta", ":tabnew<CR>", opts)
+keymap("n", "<leader>tc", ":tabclose<CR>", opts)
+keymap("n", "<leader>to", ":tabonly<CR>", opts)
+keymap("n", "<leader>tn", ":tabn<CR>", opts)
+keymap("n", "<leader>tp", ":tabp<CR>", opts)
+keymap("n", "<leader>tmp", ":-tabmove<CR>", opts)
+keymap("n", "<leader>tmn", ":+tabmove<CR>", opts)
