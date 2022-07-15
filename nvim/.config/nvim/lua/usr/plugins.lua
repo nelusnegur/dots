@@ -101,6 +101,12 @@ return packer.startup(function(use)
   }
   use "nvim-treesitter/playground"
 
+  -- Dashboard
+  use {
+    'goolord/alpha-nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+  }
+
   -- Markdown preview
   use({
     "iamcco/markdown-preview.nvim",
