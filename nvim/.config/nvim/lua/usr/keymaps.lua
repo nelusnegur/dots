@@ -62,9 +62,11 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 keymap("n", "<leader>ff", ":Telescope find_files<cr>", opts)
 keymap("n", "<leader>fg", ":Telescope live_grep<cr>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<cr>", opts)
-keymap("n", "<leader>fh", ":Telescope help_tags<cr>", opts)
-keymap("n", "<leader>fw", ":Telescope lsp_workspace_symbols<cr>", opts)
+keymap("n", "<leader>fs", ":Telescope lsp_workspace_symbols<cr>", opts)
 keymap("n", "<leader>fd", ":Telescope lsp_document_symbols<cr>", opts)
+keymap("n", "<leader>fr", ":Telescope registers<cr>", opts)
+keymap("n", "<leader>fp", ":Telescope pickers<cr>", opts)
+keymap("n", "<leader>ft", ":Telescope help_tags<cr>", opts)
 
 -- Treeview
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
