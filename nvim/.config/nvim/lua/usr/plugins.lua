@@ -76,9 +76,6 @@ return packer.startup(function(use)
   -- Tree view
   use "kyazdani42/nvim-tree.lua"
 
-  -- Zen mode
-  use "folke/zen-mode.nvim"
-
   -- Autocompletion (cmp) plugins
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-buffer"
