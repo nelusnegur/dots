@@ -8,12 +8,14 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Modes
---   normal_mode = "n",
---   insert_mode = "i",
---   visual_mode = "v",
---   visual_block_mode = "x",
---   term_mode = "t",
---   command_mode = "c",
+--   normal = "n",
+--   insert = "i",
+--   replace = "r"
+--   visual = "v",
+--   visual block = "x",
+--   select = "s",
+--   term = "t",
+--   command = "c",
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
