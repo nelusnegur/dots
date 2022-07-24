@@ -1,6 +1,7 @@
 require("lspconfig")
 require("usr.lsp.handlers").setup()
 require("usr.lsp.lsp-installer")
+require("usr.lsp.lsp-lines")
 require("usr.lsp.autocmds")
 require("usr.lsp.rust-tools")
 require("usr.lsp.scala-metals")
