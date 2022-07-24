@@ -35,16 +35,11 @@ telescope.setup {
     }
   },
   extensions = {
-    -- Your extension configuration goes here:
-    -- extension_name = {
-    --   extension_config_key = value,
-    -- }
-
-    -- ["ui-select"] = {
-    --   require("telescope.themes").get_dropdown {
-    --     -- even more opts
-    --   }
-    -- }
+    ["ui-select"] = {
+      require("telescope.themes").get_dropdown {
+        -- even more opts
+      }
+    }
   },
 }
 
