@@ -6,6 +6,11 @@ lsp_installer.on_server_ready(function(server)
     capabilities = require("usr.lsp.handlers").capabilities,
   }
 
+  if server.name == "rust_analyzer" then
+    -- Skip lsp config setup since rust-tools sets everything up automatically
+    goto skip_setup
+  end
+
   if server.name == "jsonls" then
     local jsonls_opts = require("usr.lsp.settings.jsonls")
     opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
@@ -22,4 +27,6 @@ lsp_installer.on_server_ready(function(server)
   end
 
   server:setup(opts)
+
+  ::skip_setup::
 end)
