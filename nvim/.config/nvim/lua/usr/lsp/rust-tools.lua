@@ -7,6 +7,7 @@ require("rust-tools").setup({
     hover_actions = {
       border = "rounded",
     },
+    autoSetHints = false,
     inlay_hints = {
       only_current_line = false,
     },
