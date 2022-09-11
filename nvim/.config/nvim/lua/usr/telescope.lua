@@ -41,8 +41,11 @@ telescope.setup {
       }
     },
     file_browser = {
+      --path = "%:p:h",
+      hidden = true,
+      grouped = true,
       -- disables netrw and use telescope-file-browser in its place
-      hijack_netrw = false,
+      hijack_netrw = true,
       mappings = {
         ["i"] = {
           -- your custom insert mode mappings

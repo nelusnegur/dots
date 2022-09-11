@@ -81,8 +81,7 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Telescope
-keymap("n", "<leader>ff", ":Telescope find_files<cr>", opts)
-keymap("n", "<leader>fj", ":Telescope find_files hidden=true<cr>", opts)
+keymap("n", "<leader>ff", ":Telescope find_files hidden=true<cr>", opts)
 keymap("n", "<leader>fg", ":Telescope live_grep<cr>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<cr>", opts)
 keymap("n", "<leader>fs", ":Telescope lsp_workspace_symbols<cr>", opts)
@@ -92,8 +91,8 @@ keymap("n", "<leader>fp", ":Telescope pickers<cr>", opts)
 keymap("n", "<leader>ft", ":Telescope help_tags<cr>", opts)
 
 -- File explorer via Telescope
-keymap("n", "<leader>ew", ":Telescope file_browser<CR>", noremap)
 keymap("n", "<leader>e", ":Telescope file_browser path=%:p:h<CR>", noremap)
+keymap("n", "<leader>we", ":Telescope file_browser<CR>", noremap)
 
 -- Trouble
 keymap("n", "<leader>xx", "<cmd>Trouble<cr>", opts)
