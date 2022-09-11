@@ -104,6 +104,9 @@ return packer.startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons' },
   }
 
+  -- Harpoon
+  use "ThePrimeagen/harpoon"
+
   -- Markdown preview
   use({
     "iamcco/markdown-preview.nvim",

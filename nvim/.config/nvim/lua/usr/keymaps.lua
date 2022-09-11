@@ -68,12 +68,6 @@ keymap("n", "<leader>j", "<cmd>lprev<CR>zz", opts)
 keymap("n", "<leader>bn", ":bnext<CR>zz", opts)
 keymap("n", "<leader>bp", ":bprevious<CR>zz", opts)
 
--- Move window
-keymap("n", "sh", "<C-w>h", noremap)
-keymap("n", "sk", "<C-w>k", noremap)
-keymap("n", "sj", "<C-w>j", noremap)
-keymap("n", "sl", "<C-w>l", noremap)
-
 -- Resize window with arrows
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
 keymap("n", "<C-Down>", ":resize -2<CR>", opts)
@@ -115,3 +109,14 @@ keymap("n", "<leader>tmn", ":+tabmove<CR>", opts)
 keymap("n", "<leader>gb", ":G blame<CR>", noremap)
 keymap("n", "<leader>gl", ":GBrowse<CR>", noremap)
 keymap("v", "<leader>gl", ":.GBrowse<CR>", noremap)
+
+-- Harpoon
+keymap("n", "<leader>a", ':lua require("harpoon.mark").add_file()<CR>', opts)
+keymap("n", "<leader>h", ':lua require("harpoon.ui").toggle_quick_menu()<CR>', opts)
+keymap("n", "<C-e>", ':lua require("harpoon.ui").toggle_quick_menu()<CR>', opts)
+keymap("n", "sh", ':lua require("harpoon.ui").nav_file(1)<CR>', opts)
+keymap("n", "sj", ':lua require("harpoon.ui").nav_file(2)<CR>', opts)
+keymap("n", "sk", ':lua require("harpoon.ui").nav_file(3)<CR>', opts)
+keymap("n", "sl", ':lua require("harpoon.ui").nav_file(4)<CR>', opts)
+keymap("n", "sn", ':lua require("harpoon.ui").nav_next()<CR>', opts)
+keymap("n", "sp", ':lua require("harpoon.ui").nav_prev()<CR>', opts)
