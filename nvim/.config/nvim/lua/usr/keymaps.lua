@@ -111,3 +111,8 @@ keymap("n", "<leader>tn", ":tabn<CR>", opts)
 keymap("n", "<leader>tp", ":tabp<CR>", opts)
 keymap("n", "<leader>tmp", ":-tabmove<CR>", opts)
 keymap("n", "<leader>tmn", ":+tabmove<CR>", opts)
+
+-- Git
+keymap("n", "<leader>gb", ":G blame<CR>", noremap)
+keymap("n", "<leader>gl", ":GBrowse<CR>", noremap)
+keymap("v", "<leader>gl", ":.GBrowse<CR>", noremap)
