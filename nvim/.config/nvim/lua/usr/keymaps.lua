@@ -1,5 +1,7 @@
-local opts = { noremap = true, silent = true }
-local term_opts = { silent = true }
+local noremap = { noremap = true }
+local silent = { silent = true }
+local opts = vim.tbl_deep_extend("force", noremap, silent)
+
 local keymap = vim.api.nvim_set_keymap
 
 -- Remap space as leader key
@@ -17,26 +19,15 @@ vim.g.maplocalleader = " "
 --   term = "t",
 --   command = "c",
 
--- Better window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+-- Centered page up / down
+keymap("n", "<C-d>", "<C-d>zz", opts)
+keymap("n", "<C-u>", "<C-u>zz", opts)
 
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
-
--- Resize with arrows
-keymap("n", "<C-Up>", ":resize +2<CR>", opts)
-keymap("n", "<C-Down>", ":resize -2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
-
--- Navigate buffers
-keymap("n", "<leader>bn", ":bnext<CR>", opts)
-keymap("n", "<leader>bp", ":bprevious<CR>", opts)
+-- Substitute the word under the cursor
+keymap("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", noremap)
 
 -- Quick escape
-keymap("i", "jj", "<Esc>", opts)
+keymap("i", "<C-c>", "<Esc>", noremap)
 
 -- Quick save
 keymap("n", "<leader>w", ":w<CR>", opts)
@@ -46,19 +37,48 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- Move text up and down
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
-keymap("v", "p", '"_dP', opts)
-keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+keymap("v", "J", ":m '>+1<CR>gv=gv", noremap)
+keymap("v", "K", ":m '<-2<CR>gv=gv", noremap)
+keymap("x", "J", ":m '>+1<CR>gv=gv", noremap)
+keymap("x", "K", ":m '<-2<CR>gv=gv", noremap)
 
--- Better terminal navigation
-keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
-keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
-keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
-keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+-- Paste without affecting the unnamed register
+keymap("v", "<leader>p", '"_dP', noremap)
+keymap("x", "<leader>p", '"_dP', noremap)
+
+-- Delete without affecting the unnamed register
+keymap("n", "<leader>d", '"_d', noremap)
+keymap("v", "<leader>d", '"_d', noremap)
+keymap("x", "<leader>d", '"_d', noremap)
+
+-- Copy to the system clipboard
+keymap("n", "<leader>y", '"+y', noremap)
+keymap("v", "<leader>y", '"+y', noremap)
+keymap("n", "<leader>Y", '"+Y', noremap)
+
+-- Navigate the quickfix list
+keymap("n", "<C-k>", "<cmd>cnext<CR>zz", opts)
+keymap("n", "<C-j>", "<cmd>cprev<CR>zz", opts)
+
+-- Navigate the location list
+keymap("n", "<leader>k", "<cmd>lnext<CR>zz", opts)
+keymap("n", "<leader>j", "<cmd>lprev<CR>zz", opts)
+
+-- Navigate buffers
+keymap("n", "<leader>bn", ":bnext<CR>zz", opts)
+keymap("n", "<leader>bp", ":bprevious<CR>zz", opts)
+
+-- Move window
+keymap("n", "sh", "<C-w>h", noremap)
+keymap("n", "sk", "<C-w>k", noremap)
+keymap("n", "sj", "<C-w>j", noremap)
+keymap("n", "sl", "<C-w>l", noremap)
+
+-- Resize window with arrows
+keymap("n", "<C-Up>", ":resize +2<CR>", opts)
+keymap("n", "<C-Down>", ":resize -2<CR>", opts)
+keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
+keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<cr>", opts)
