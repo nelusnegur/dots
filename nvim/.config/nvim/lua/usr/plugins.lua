@@ -57,6 +57,7 @@ return packer.startup(function(use)
   -- Telescope
   use "nvim-telescope/telescope.nvim"
   use "nvim-telescope/telescope-ui-select.nvim"
+  use "nvim-telescope/telescope-file-browser.nvim"
 
   -- Trouble
   use "folke/trouble.nvim"
@@ -72,9 +73,6 @@ return packer.startup(function(use)
   use "lewis6991/gitsigns.nvim"
   use "tpope/vim-fugitive"
   use "tpope/vim-rhubarb"
-
-  -- Tree view
-  use "kyazdani42/nvim-tree.lua"
 
   -- Autocompletion (cmp) plugins
   use "hrsh7th/nvim-cmp"

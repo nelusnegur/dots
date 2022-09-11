@@ -39,8 +39,21 @@ telescope.setup {
       require("telescope.themes").get_dropdown {
         -- even more opts
       }
-    }
+    },
+    file_browser = {
+      -- disables netrw and use telescope-file-browser in its place
+      hijack_netrw = false,
+      mappings = {
+        ["i"] = {
+          -- your custom insert mode mappings
+        },
+        ["n"] = {
+          -- your custom normal mode mappings
+        },
+      },
+    },
   },
 }
 
 telescope.load_extension("ui-select")
+telescope.load_extension("file_browser")
