@@ -1,6 +1,5 @@
 vim.opt.backup = false
-vim.opt.clipboard = "unnamedplus"
-vim.opt.cmdheight = 2
+vim.opt.cmdheight = 1
 vim.opt.completeopt = { "menuone", "noselect" }
 vim.opt.conceallevel = 0
 vim.opt.fileencoding = "utf-8"
@@ -32,6 +31,6 @@ vim.opt.wrap = false
 vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 vim.opt.guifont = "Iosevka:h18"
-vim.opt.shortmess:append "c"
+vim.opt.shortmess:append("c")
 vim.opt.whichwrap:append("<,>,[,],h,l")
 vim.opt.iskeyword:append("-")
