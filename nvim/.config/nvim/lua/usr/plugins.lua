@@ -62,9 +62,6 @@ return packer.startup(function(use)
   -- Trouble
   use "folke/trouble.nvim"
 
-  -- Autopairs (), [], {}
-  use "windwp/nvim-autopairs"
-
   -- Comments
   use "numToStr/Comment.nvim"
   use "JoosepAlviste/nvim-ts-context-commentstring"
