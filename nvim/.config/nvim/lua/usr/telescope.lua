@@ -41,10 +41,12 @@ telescope.setup {
       }
     },
     file_browser = {
+      theme = "dropdown",
+      previewer = false,
       hidden = true,
       grouped = true,
       hijack_netrw = true,
-      initial_mode = "normal",
+      layout_config = { height = 0.4 },
       mappings = {
         ["i"] = {
           -- your custom insert mode mappings
