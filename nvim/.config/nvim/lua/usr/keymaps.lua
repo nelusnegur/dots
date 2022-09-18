@@ -2,7 +2,7 @@ local noremap = { noremap = true }
 local silent = { silent = true }
 local opts = vim.tbl_deep_extend("force", noremap, silent)
 
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
 
 -- Modes
 --   normal = "n",
@@ -76,7 +76,7 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
-keymap("n", "<leader>fj", ":lua require('telescope.builtin').find_files({ cwd = vim.fn.expand('%:p:h') })<CR>", opts)
+keymap("n", "<leader>fj", function () require("telescope.builtin").find_files({ cwd = vim.fn.expand('%:p:h') }) end, opts)
 keymap("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 keymap("n", "<leader>fs", ":Telescope lsp_workspace_symbols<CR>", opts)
@@ -116,16 +116,16 @@ keymap("n", "<leader>gb", ":Telescope git_branches<CR>", noremap)
 keymap("n", "<leader>gs", ":Telescope git_stash<CR>", noremap)
 
 -- Harpoon
-keymap("n", "<leader>he", ':lua require("harpoon.ui").toggle_quick_menu()<CR>', opts)
-keymap("n", "<leader>ha", ':lua require("harpoon.mark").add_file()<CR>', opts)
-keymap("n", "<leader>hr", ':lua require("harpoon.mark").rm_file()<CR>', opts)
-keymap("n", "<leader>hn", ':lua require("harpoon.ui").nav_next()<CR>', opts)
-keymap("n", "<leader>hp", ':lua require("harpoon.ui").nav_prev()<CR>', opts)
+keymap("n", "<leader>he", function () require("harpoon.ui").toggle_quick_menu() end, opts)
+keymap("n", "<leader>ha", function () require("harpoon.mark").add_file() end, opts)
+keymap("n", "<leader>hr", function () require("harpoon.mark").rm_file() end, opts)
+keymap("n", "<leader>hn", function () require("harpoon.ui").nav_next() end, opts)
+keymap("n", "<leader>hp", function () require("harpoon.ui").nav_prev() end, opts)
 
-keymap("n", "<leader>hh", ':lua require("harpoon.ui").nav_file(1)<CR>', opts)
-keymap("n", "<leader>hj", ':lua require("harpoon.ui").nav_file(2)<CR>', opts)
-keymap("n", "<leader>hk", ':lua require("harpoon.ui").nav_file(3)<CR>', opts)
-keymap("n", "<leader>hl", ':lua require("harpoon.ui").nav_file(4)<CR>', opts)
+keymap("n", "<leader>hh", function () require("harpoon.ui").nav_file(1) end, opts)
+keymap("n", "<leader>hj", function () require("harpoon.ui").nav_file(2) end, opts)
+keymap("n", "<leader>hk", function () require("harpoon.ui").nav_file(3) end, opts)
+keymap("n", "<leader>hl", function () require("harpoon.ui").nav_file(4) end, opts)
 
 -- Undotree
 keymap("n", "<leader>ut", ':UndotreeShow<CR>', opts)
