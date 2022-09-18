@@ -107,12 +107,12 @@ keymap("n", "<leader>tmp", ":-tabmove<CR>", opts)
 keymap("n", "<leader>tmn", ":+tabmove<CR>", opts)
 
 -- Git
-keymap("n", "<leader>gb", ":G blame<CR>", noremap)
+keymap("n", "<leader>gh", ":G blame<CR>", noremap)
 keymap("n", "<leader>gl", ":GBrowse<CR>", noremap)
 keymap("v", "<leader>gl", ":.GBrowse<CR>", noremap)
 
 keymap("n", "<leader>gc", ":Telescope git_commits<CR>", noremap)
-keymap("n", "<leader>gr", ":Telescope git_branches<CR>", noremap)
+keymap("n", "<leader>gb", ":Telescope git_branches<CR>", noremap)
 keymap("n", "<leader>gs", ":Telescope git_stash<CR>", noremap)
 
 -- Harpoon
