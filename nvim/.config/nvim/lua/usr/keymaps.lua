@@ -42,9 +42,14 @@ keymap("v", "K", ":m '<-2<CR>gv=gv", noremap)
 keymap("x", "J", ":m '>+1<CR>gv=gv", noremap)
 keymap("x", "K", ":m '<-2<CR>gv=gv", noremap)
 
+-- Paste from system clipboard
+keymap("n", "<leader>pc", '"+p', noremap)
+keymap("v", "<leader>pc", '"+p', noremap)
+keymap("x", "<leader>pc", '"+p', noremap)
+
 -- Paste without affecting the unnamed register
-keymap("v", "<leader>p", '"_dP', noremap)
-keymap("x", "<leader>p", '"_dP', noremap)
+keymap("v", "<leader>pb", '"_dP', noremap)
+keymap("x", "<leader>pb", '"_dP', noremap)
 
 -- Delete without affecting the unnamed register
 keymap("n", "<leader>d", '"_d', noremap)
