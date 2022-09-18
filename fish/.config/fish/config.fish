@@ -14,6 +14,8 @@ abbr -a gc! 'git commit -v --amend'
 abbr -a gl 'git pull'
 abbr -a gp 'git push'
 
+alias vim="nvim"
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
