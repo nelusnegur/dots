@@ -57,12 +57,12 @@ keymap("v", "<leader>y", '"+y', noremap)
 keymap("n", "<leader>Y", '"+Y', noremap)
 
 -- Navigate the quickfix list
-keymap("n", "<C-k>", "<cmd>cnext<CR>zz", opts)
-keymap("n", "<C-j>", "<cmd>cprev<CR>zz", opts)
+keymap("n", "<C-k>", ":cnext<CR>zz", opts)
+keymap("n", "<C-j>", ":cprev<CR>zz", opts)
 
 -- Navigate the location list
-keymap("n", "<leader>k", "<cmd>lnext<CR>zz", opts)
-keymap("n", "<leader>j", "<cmd>lprev<CR>zz", opts)
+keymap("n", "<leader>k", ":lnext<CR>zz", opts)
+keymap("n", "<leader>j", ":lprev<CR>zz", opts)
 
 -- Navigate buffers
 keymap("n", "<leader>bn", ":bnext<CR>zz", opts)
@@ -75,26 +75,26 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Telescope
-keymap("n", "<leader>ff", ":Telescope find_files hidden=true<cr>", opts)
-keymap("n", "<leader>fg", ":Telescope live_grep<cr>", opts)
-keymap("n", "<leader>fb", ":Telescope buffers<cr>", opts)
-keymap("n", "<leader>fs", ":Telescope lsp_workspace_symbols<cr>", opts)
-keymap("n", "<leader>fd", ":Telescope lsp_document_symbols<cr>", opts)
-keymap("n", "<leader>fr", ":Telescope registers<cr>", opts)
-keymap("n", "<leader>fp", ":Telescope pickers<cr>", opts)
-keymap("n", "<leader>ft", ":Telescope help_tags<cr>", opts)
+keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
+keymap("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
+keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
+keymap("n", "<leader>fs", ":Telescope lsp_workspace_symbols<CR>", opts)
+keymap("n", "<leader>fd", ":Telescope lsp_document_symbols<CR>", opts)
+keymap("n", "<leader>fr", ":Telescope registers<CR>", opts)
+keymap("n", "<leader>fp", ":Telescope pickers<CR>", opts)
+keymap("n", "<leader>ft", ":Telescope help_tags<CR>", opts)
 
 -- File explorer via Telescope
 keymap("n", "<leader>e", ":Telescope file_browser path=%:p:h<CR>", noremap)
 keymap("n", "<leader>we", ":Telescope file_browser<CR>", noremap)
 
 -- Trouble
-keymap("n", "<leader>xx", "<cmd>Trouble<cr>", opts)
-keymap("n", "<leader>xw", "<cmd>Trouble workspace_diagnostics<cr>", opts)
-keymap("n", "<leader>xd", "<cmd>Trouble document_diagnostics<cr>", opts)
-keymap("n", "<leader>xl", "<cmd>Trouble loclist<cr>", opts)
-keymap("n", "<leader>xq", "<cmd>Trouble quickfix<cr>", opts)
-keymap("n", "gR", "<cmd>Trouble lsp_references<cr>", opts)
+keymap("n", "<leader>xx", ":Trouble<CR>", opts)
+keymap("n", "<leader>xw", ":Trouble workspace_diagnostics<CR>", opts)
+keymap("n", "<leader>xd", ":Trouble document_diagnostics<CR>", opts)
+keymap("n", "<leader>xl", ":Trouble loclist<CR>", opts)
+keymap("n", "<leader>xq", ":Trouble quickfix<CR>", opts)
+keymap("n", "gR", ":Trouble lsp_references<CR>", opts)
 
 -- Navigate tabs
 keymap("n", "<leader>ta", ":tabnew<CR>", opts)
