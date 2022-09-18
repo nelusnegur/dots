@@ -76,6 +76,7 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
+keymap("n", "<leader>fj", ":lua require('telescope.builtin').find_files({ cwd = vim.fn.expand('%:p:h') })<CR>", opts)
 keymap("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 keymap("n", "<leader>fs", ":Telescope lsp_workspace_symbols<CR>", opts)
@@ -109,6 +110,10 @@ keymap("n", "<leader>tmn", ":+tabmove<CR>", opts)
 keymap("n", "<leader>gb", ":G blame<CR>", noremap)
 keymap("n", "<leader>gl", ":GBrowse<CR>", noremap)
 keymap("v", "<leader>gl", ":.GBrowse<CR>", noremap)
+
+keymap("n", "<leader>gc", ":Telescope git_commits<CR>", noremap)
+keymap("n", "<leader>gr", ":Telescope git_branches<CR>", noremap)
+keymap("n", "<leader>gs", ":Telescope git_stash<CR>", noremap)
 
 -- Harpoon
 keymap("n", "<leader>he", ':lua require("harpoon.ui").toggle_quick_menu()<CR>', opts)
