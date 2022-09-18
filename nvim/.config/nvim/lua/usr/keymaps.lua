@@ -126,3 +126,6 @@ keymap("n", "<leader>hh", ':lua require("harpoon.ui").nav_file(1)<CR>', opts)
 keymap("n", "<leader>hj", ':lua require("harpoon.ui").nav_file(2)<CR>', opts)
 keymap("n", "<leader>hk", ':lua require("harpoon.ui").nav_file(3)<CR>', opts)
 keymap("n", "<leader>hl", ':lua require("harpoon.ui").nav_file(4)<CR>', opts)
+
+-- Undotree
+keymap("n", "<leader>ut", ':UndotreeShow<CR>', opts)

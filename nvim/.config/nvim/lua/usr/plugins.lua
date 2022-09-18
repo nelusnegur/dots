@@ -65,6 +65,9 @@ return packer.startup(function(use)
   use "numToStr/Comment.nvim"
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
+  -- Undo tree
+  use "mbbill/undotree"
+
   -- Git
   use "lewis6991/gitsigns.nvim"
   use "tpope/vim-fugitive"
