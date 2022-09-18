@@ -41,7 +41,6 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim"
 
   -- Colorschemes
-  use 'navarasu/onedark.nvim'
   use 'folke/tokyonight.nvim'
   use "EdenEast/nightfox.nvim"
 
@@ -87,7 +86,7 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer"
   use "Maan2003/lsp_lines.nvim"
 
-  -- Tree sitter
+  -- Treesitter
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
