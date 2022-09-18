@@ -4,11 +4,6 @@ local opts = vim.tbl_deep_extend("force", noremap, silent)
 
 local keymap = vim.api.nvim_set_keymap
 
--- Remap space as leader key
-keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
 -- Modes
 --   normal = "n",
 --   insert = "i",
