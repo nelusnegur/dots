@@ -1,18 +1,21 @@
 local telescope = require("telescope")
 local actions = require("telescope.actions")
+local action_layout = require("telescope.actions.layout")
 local trouble = require("trouble.providers.telescope")
 
 telescope.setup {
   defaults = {
-    prompt_prefix = " ",
-    selection_caret = " ",
+    prompt_prefix = "> ",
+    selection_caret = "> ",
+    entry_prefix = "  ",
+    multi_icon = "<>",
     path_display = { "smart" },
     mappings = {
       i = {
-        -- actions.which_key shows the mappings for your picker,
-        -- e.g. git_{create, delete, ...}_branch for the git_branches picker
         ["<C-/>"] = actions.which_key,
         ["<C-t>"] = trouble.open_with_trouble,
+        ["<M-p>"] = action_layout.toggle_preview,
+        ["<M-m>"] = action_layout.toggle_mirror,
       },
       n = {
         ["?"] = actions.which_key,

@@ -747,6 +747,8 @@ font:
 # in the order they were defined in.
 key_bindings:
   - { key: C, mods: Alt, chars: "\x1bc" }
+  - { key: M, mods: Alt, chars: "\x1bm" }
+  - { key: P, mods: Alt, chars: "\x1bp" }
 
   #- { key: Paste,                                       action: Paste          }
   #- { key: Copy,                                        action: Copy           }
