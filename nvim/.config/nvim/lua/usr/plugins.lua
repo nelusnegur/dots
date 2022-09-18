@@ -98,12 +98,6 @@ return packer.startup(function(use)
   use 'nvim-treesitter/nvim-treesitter-context'
   use "nvim-treesitter/playground"
 
-  -- Dashboard
-  use {
-    'goolord/alpha-nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' },
-  }
-
   -- Harpoon
   use "ThePrimeagen/harpoon"
 
