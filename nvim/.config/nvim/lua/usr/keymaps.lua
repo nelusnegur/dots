@@ -86,8 +86,7 @@ keymap("n", "<leader>fp", ":Telescope pickers<CR>", opts)
 keymap("n", "<leader>ft", ":Telescope help_tags<CR>", opts)
 
 -- File explorer via Telescope
-keymap("n", "<leader>e", ":Telescope file_browser path=%:p:h<CR>", noremap)
-keymap("n", "<leader>we", ":Telescope file_browser<CR>", noremap)
+keymap("n", "<leader>e", ":Telescope file_browser<CR>", noremap)
 
 -- Trouble
 keymap("n", "<leader>xx", ":Trouble<CR>", opts)

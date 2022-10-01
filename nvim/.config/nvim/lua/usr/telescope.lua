@@ -45,6 +45,7 @@ telescope.setup {
     },
     file_browser = {
       theme = "dropdown",
+      path = "%:p:h",
       previewer = false,
       hidden = true,
       grouped = true,
