@@ -2,7 +2,7 @@ vim.opt.fileencoding = "utf-8"
 vim.opt.conceallevel = 0
 vim.opt.termguicolors = true
 
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
