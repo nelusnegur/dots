@@ -14,8 +14,9 @@ telescope.setup {
       i = {
         ["<C-/>"] = actions.which_key,
         ["<C-t>"] = trouble.open_with_trouble,
-        ["<M-p>"] = action_layout.toggle_preview,
+        ["<M-y>"] = action_layout.toggle_preview,
         ["<M-m>"] = action_layout.toggle_mirror,
+        ["<M-t>"] = action_layout.cycle_layout_next,
       },
       n = {
         ["?"] = actions.which_key,
