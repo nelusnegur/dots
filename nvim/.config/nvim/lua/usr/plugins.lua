@@ -44,6 +44,8 @@ return packer.startup(function(use)
   use 'folke/tokyonight.nvim'
   use "EdenEast/nightfox.nvim"
 
+  use "kyazdani42/nvim-web-devicons"
+
   -- Tabline
   use "nanozuki/tabby.nvim"
 
