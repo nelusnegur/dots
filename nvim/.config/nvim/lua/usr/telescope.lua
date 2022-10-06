@@ -48,7 +48,6 @@ telescope.setup {
       theme = "dropdown",
       path = "%:p:h",
       previewer = false,
-      hidden = true,
       grouped = true,
       hijack_netrw = true,
       layout_config = { height = 0.4 },
