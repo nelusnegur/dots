@@ -75,8 +75,7 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Telescope
-keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
-keymap("n", "<leader>fj", function () require("telescope.builtin").find_files({ cwd = vim.fn.expand('%:p:h') }) end, opts)
+keymap("n", "<leader>fj", ":Telescope find_files<CR>", opts)
 keymap("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fk", ":Telescope grep_string<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
