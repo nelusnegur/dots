@@ -122,10 +122,10 @@ keymap("n", "<leader>hr", function () require("harpoon.mark").rm_file() end, opt
 keymap("n", "<leader>hn", function () require("harpoon.ui").nav_next() end, opts)
 keymap("n", "<leader>hp", function () require("harpoon.ui").nav_prev() end, opts)
 
-keymap("n", "<leader>hh", function () require("harpoon.ui").nav_file(1) end, opts)
-keymap("n", "<leader>hj", function () require("harpoon.ui").nav_file(2) end, opts)
-keymap("n", "<leader>hk", function () require("harpoon.ui").nav_file(3) end, opts)
-keymap("n", "<leader>hl", function () require("harpoon.ui").nav_file(4) end, opts)
+keymap("n", "<leader>sh", function () require("harpoon.ui").nav_file(1) end, opts)
+keymap("n", "<leader>sj", function () require("harpoon.ui").nav_file(2) end, opts)
+keymap("n", "<leader>sk", function () require("harpoon.ui").nav_file(3) end, opts)
+keymap("n", "<leader>sl", function () require("harpoon.ui").nav_file(4) end, opts)
 
 -- Undotree
 keymap("n", "<leader>ut", ':UndotreeShow<CR>', opts)
