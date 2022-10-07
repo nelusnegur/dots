@@ -2,6 +2,7 @@ abbr -a v nvim
 abbr -a c cargo
 abbr -a m make
 abbr -a k kubectl
+
 abbr -a g git
 abbr -a gst 'git status'
 abbr -a gd 'git diff'
@@ -13,6 +14,8 @@ abbr -a gc 'git commit -v'
 abbr -a gc! 'git commit -v --amend'
 abbr -a gl 'git pull'
 abbr -a gp 'git push'
+abbr -a gwa 'git worktree add'
+abbr -a gwr 'git worktree remove'
 
 alias vim="nvim"
 
