@@ -10,8 +10,8 @@ metals_config.settings = {
 
 local handlers = require("usr.lsp.handlers")
 
-metals_config.on_attach = function (client, bufnr)
- handlers.on_attach(client, bufnr)
+metals_config.on_attach = function(client, bufnr)
+  handlers.on_attach(client, bufnr)
 end
 
 metals_config.capabilities = handlers.capabilities

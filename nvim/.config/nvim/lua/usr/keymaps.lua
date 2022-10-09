@@ -115,16 +115,16 @@ keymap("n", "<leader>gb", ":Telescope git_branches<CR>", noremap)
 keymap("n", "<leader>gs", ":Telescope git_stash<CR>", noremap)
 
 -- Harpoon
-keymap("n", "<leader>he", function () require("harpoon.ui").toggle_quick_menu() end, opts)
-keymap("n", "<leader>ha", function () require("harpoon.mark").add_file() end, opts)
-keymap("n", "<leader>hr", function () require("harpoon.mark").rm_file() end, opts)
-keymap("n", "<leader>hn", function () require("harpoon.ui").nav_next() end, opts)
-keymap("n", "<leader>hp", function () require("harpoon.ui").nav_prev() end, opts)
+keymap("n", "<leader>he", function() require("harpoon.ui").toggle_quick_menu() end, opts)
+keymap("n", "<leader>ha", function() require("harpoon.mark").add_file() end, opts)
+keymap("n", "<leader>hr", function() require("harpoon.mark").rm_file() end, opts)
+keymap("n", "<leader>hn", function() require("harpoon.ui").nav_next() end, opts)
+keymap("n", "<leader>hp", function() require("harpoon.ui").nav_prev() end, opts)
 
-keymap("n", "<leader>sh", function () require("harpoon.ui").nav_file(1) end, opts)
-keymap("n", "<leader>sj", function () require("harpoon.ui").nav_file(2) end, opts)
-keymap("n", "<leader>sk", function () require("harpoon.ui").nav_file(3) end, opts)
-keymap("n", "<leader>sl", function () require("harpoon.ui").nav_file(4) end, opts)
+keymap("n", "<leader>sh", function() require("harpoon.ui").nav_file(1) end, opts)
+keymap("n", "<leader>sj", function() require("harpoon.ui").nav_file(2) end, opts)
+keymap("n", "<leader>sk", function() require("harpoon.ui").nav_file(3) end, opts)
+keymap("n", "<leader>sl", function() require("harpoon.ui").nav_file(4) end, opts)
 
 -- Undotree
 keymap("n", "<leader>ut", ':UndotreeShow<CR>', opts)
