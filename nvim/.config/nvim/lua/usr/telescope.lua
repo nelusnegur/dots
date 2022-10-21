@@ -9,7 +9,7 @@ telescope.setup {
     selection_caret = "> ",
     entry_prefix = "  ",
     multi_icon = "<>",
-    path_display = { "smart" },
+    path_display = { "truncate" },
     mappings = {
       i = {
         ["<C-/>"] = actions.which_key,
