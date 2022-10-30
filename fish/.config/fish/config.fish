@@ -55,7 +55,8 @@ function fish_prompt
 end
 
 
-set PATH ~/.cargo/bin \
+set PATH ~/.local/bin \
+   ~/.cargo/bin \
    /usr/local/opt/ruby/bin \
    ~/.gem/ruby/3.0.0/bin $PATH
 
