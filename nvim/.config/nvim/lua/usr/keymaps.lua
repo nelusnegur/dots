@@ -43,8 +43,8 @@ keymap("v", "<leader>pc", '"+p', noremap)
 keymap("x", "<leader>pc", '"+p', noremap)
 
 -- Paste without affecting the unnamed register
-keymap("v", "<leader>pb", '"_dP', noremap)
-keymap("x", "<leader>pb", '"_dP', noremap)
+keymap("v", "<leader>pf", '"_dP', noremap)
+keymap("x", "<leader>pf", '"_dP', noremap)
 
 -- Delete without affecting the unnamed register
 keymap("n", "<leader>d", '"_d', noremap)
@@ -61,8 +61,8 @@ keymap("n", "<C-k>", ":cnext<CR>zz", opts)
 keymap("n", "<C-j>", ":cprev<CR>zz", opts)
 
 -- Navigate the location list
-keymap("n", "<leader>k", ":lnext<CR>zz", opts)
-keymap("n", "<leader>j", ":lprev<CR>zz", opts)
+keymap("n", "<leader>mk", ":lnext<CR>zz", opts)
+keymap("n", "<leader>mj", ":lprev<CR>zz", opts)
 
 -- Navigate buffers
 keymap("n", "<leader>bn", ":bnext<CR>zz", opts)
@@ -121,10 +121,10 @@ keymap("n", "<leader>hr", function() require("harpoon.mark").rm_file() end, opts
 keymap("n", "<leader>hn", function() require("harpoon.ui").nav_next() end, opts)
 keymap("n", "<leader>hp", function() require("harpoon.ui").nav_prev() end, opts)
 
-keymap("n", "<leader>sh", function() require("harpoon.ui").nav_file(1) end, opts)
-keymap("n", "<leader>sj", function() require("harpoon.ui").nav_file(2) end, opts)
-keymap("n", "<leader>sk", function() require("harpoon.ui").nav_file(3) end, opts)
-keymap("n", "<leader>sl", function() require("harpoon.ui").nav_file(4) end, opts)
+keymap("n", "<leader>j", function() require("harpoon.ui").nav_file(1) end, opts)
+keymap("n", "<leader>k", function() require("harpoon.ui").nav_file(2) end, opts)
+keymap("n", "<leader>l", function() require("harpoon.ui").nav_file(3) end, opts)
+keymap("n", "<leader>;", function() require("harpoon.ui").nav_file(4) end, opts)
 
 -- Undotree
 keymap("n", "<leader>ut", ':UndotreeShow<CR>', opts)
