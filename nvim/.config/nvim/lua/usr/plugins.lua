@@ -90,6 +90,7 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig"
   use "williamboman/nvim-lsp-installer"
   use "WhoIsSethDaniel/lualine-lsp-progress.nvim"
+  use "lvimuser/lsp-inlayhints.nvim"
 
   -- Treesitter
   use {
