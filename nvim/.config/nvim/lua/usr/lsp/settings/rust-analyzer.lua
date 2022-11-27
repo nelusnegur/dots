@@ -10,8 +10,8 @@ return {
           enable = "always",
           useParameterNames = false
         },
-        reborrowHints = {
-          enable = "always"
+        expressionAdjustmentHints = {
+          enable = "always" -- available options: always, never, reborrow
         },
         bindingModeHints = {
           enable = false,
