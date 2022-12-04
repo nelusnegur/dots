@@ -11,7 +11,7 @@ return {
           useParameterNames = false
         },
         expressionAdjustmentHints = {
-          enable = "always" -- available options: always, never, reborrow
+          enable = "reborrow" -- available options: always, never, reborrow
         },
         bindingModeHints = {
           enable = false,
