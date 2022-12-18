@@ -18,6 +18,10 @@ local keymap = vim.keymap.set
 keymap("n", "<C-d>", "<C-d>zz", opts)
 keymap("n", "<C-u>", "<C-u>zz", opts)
 
+-- Centered navigation through search results
+keymap("n", "n", "nzz", opts)
+keymap("n", "N", "Nzz", opts)
+
 -- Substitute the word under the cursor
 keymap("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", noremap)
 
