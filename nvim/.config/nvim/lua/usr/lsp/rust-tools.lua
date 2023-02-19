@@ -1,5 +1,4 @@
 local handlers = require("usr.lsp.handlers")
-local rust_opts = require("usr.lsp.settings.rust-analyzer")
 
 require("rust-tools").setup({
   tools = {
@@ -15,6 +14,48 @@ require("rust-tools").setup({
   server = {
     on_attach = handlers.on_attach,
     capabilities = handlers.capabilities,
-    settings = rust_opts.settings
+    -- see https://github.com/rust-lang/rust-analyzer/blob/master/docs/user/generated_config.adoc
+    settings = {
+      ["rust-analyzer"] = {
+        lens = {
+          enable = true,
+        },
+        inlayHints = {
+          lifetimeElisionHints = {
+            enable = "always",
+            useParameterNames = false
+          },
+          expressionAdjustmentHints = {
+            enable = "reborrow" -- available options: always, never, reborrow
+          },
+          bindingModeHints = {
+            enable = false,
+          },
+          chainingHints = {
+            enable = false,
+          },
+          closingBraceHints = {
+            enable = false,
+            minLines = 25
+          },
+          closureReturnTypeHints = {
+            enable = "never",
+            maxLength = 25
+          },
+          parameterHints = {
+            enable = false
+          },
+          renderColons = true,
+          typeHints = {
+            enable = false,
+            hideClosureInitialization = false,
+            hideNamedConstructor = false
+          },
+        },
+        checkOnSave = {
+          command = "clippy",
+        },
+      },
+    },
   }
 })

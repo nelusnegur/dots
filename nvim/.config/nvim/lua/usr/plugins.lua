@@ -88,7 +88,8 @@ return packer.startup(function(use)
 
   -- LSP
   use "neovim/nvim-lspconfig"
-  use "williamboman/nvim-lsp-installer"
+  use "williamboman/mason.nvim"
+  use "williamboman/mason-lspconfig.nvim"
   use "WhoIsSethDaniel/lualine-lsp-progress.nvim"
   use "lvimuser/lsp-inlayhints.nvim"
 

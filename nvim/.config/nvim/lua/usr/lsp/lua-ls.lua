@@ -1,4 +1,8 @@
+local handlers = require("usr.lsp.handlers")
+
 require("lspconfig").lua_ls.setup {
+  on_attach = handlers.on_attach,
+  capabilities = handlers.capabilities,
   settings = {
     Lua = {
       runtime = {

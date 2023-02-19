@@ -123,7 +123,11 @@ local schemas = {
   },
 }
 
-local opts = {
+local handlers = require("usr.lsp.handlers")
+
+require("lspconfig").jsonls.setup {
+  on_attach = handlers.on_attach,
+  capabilities = handlers.capabilities,
   settings = {
     json = {
       schemas = schemas,
@@ -139,6 +143,3 @@ local opts = {
     },
   },
 }
-
-return opts
-
