@@ -11,13 +11,15 @@ telescope.setup {
     path_display = { "truncate" },
     mappings = {
       i = {
-        ["<C-/>"] = actions.which_key,
+        ["<C-?>"] = actions.which_key,
         ["<M-y>"] = action_layout.toggle_preview,
         ["<M-m>"] = action_layout.toggle_mirror,
         ["<M-t>"] = action_layout.cycle_layout_next,
+        ["<C-f>"] = actions.send_to_qflist,
       },
       n = {
         ["?"] = actions.which_key,
+        ["<C-f>"] = actions.send_to_qflist,
       },
     },
   },
