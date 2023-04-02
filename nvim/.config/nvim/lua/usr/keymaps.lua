@@ -61,8 +61,11 @@ keymap("v", "<leader>y", '"+y', noremap)
 keymap("n", "<leader>Y", '"+Y', noremap)
 
 -- Navigate the quickfix list
-keymap("n", "<C-k>", ":cnext<CR>zz", opts)
-keymap("n", "<C-j>", ":cprev<CR>zz", opts)
+keymap("n", "<C-j>", ":cn<CR>zz", opts)
+keymap("n", "<C-k>", ":cp<CR>zz", opts)
+
+keymap("n", "<leader>co", ":colder<CR>", opts)
+keymap("n", "<leader>cn", ":cnewer<CR>", opts)
 
 -- Navigate the location list
 keymap("n", "<leader>mk", ":lnext<CR>zz", opts)

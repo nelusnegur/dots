@@ -12,7 +12,8 @@ local function set_lsp_keymaps(bufnr)
   vim.keymap.set("n", "gl", function() vim.diagnostic.open_float({ border = "rounded" }) end, opts)
   vim.keymap.set("n", "[d", function() vim.diagnostic.goto_prev({ border = "rounded" }) end, opts)
   vim.keymap.set("n", "]d", function() vim.diagnostic.goto_next({ border = "rounded" }) end, opts)
-  vim.keymap.set("n", "<leader>q", function() vim.diagnostic.setloclist() end, opts)
+  vim.keymap.set("n", "<leader>ci", function() vim.diagnostic.setqflist() end, opts)
+  vim.keymap.set("n", "<leader>ms", function() vim.diagnostic.setloclist() end, opts)
   vim.keymap.set('n', '<leader>fo', function() vim.lsp.buf.format { async = true } end, opts)
 end
 
