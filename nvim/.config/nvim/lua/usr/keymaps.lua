@@ -68,12 +68,12 @@ keymap("n", "<leader>co", ":colder<CR>", opts)
 keymap("n", "<leader>cn", ":cnewer<CR>", opts)
 
 -- Navigate the location list
-keymap("n", "<leader>mk", ":lnext<CR>zz", opts)
-keymap("n", "<leader>mj", ":lprev<CR>zz", opts)
+keymap("n", "<leader>mj", ":ln<CR>zz", opts)
+keymap("n", "<leader>mk", ":lp<CR>zz", opts)
 
 -- Navigate buffers
-keymap("n", "<leader>bn", ":bnext<CR>zz", opts)
-keymap("n", "<leader>bp", ":bprevious<CR>zz", opts)
+keymap("n", "<leader>bn", ":bn<CR>zz", opts)
+keymap("n", "<leader>bp", ":bp<CR>zz", opts)
 
 -- Resize window with arrows
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
@@ -83,11 +83,17 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Telescope
 keymap("n", "<leader>fj", ":Telescope find_files<CR>", opts)
+keymap("n", "<leader>fh", ":Telescope find_files hidden=true<CR>", opts)
 keymap("n", "<leader>fl", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fk", ":Telescope grep_string<CR>", opts)
-keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
+
+keymap("n", "<leader>fi", ":Telescope quickfix<CR>", opts)
+keymap("n", "<leader>fu", ":Telescope quickfixhistory<CR>", opts)
+
 keymap("n", "<leader>fs", ":Telescope lsp_dynamic_workspace_symbols<CR>", opts)
 keymap("n", "<leader>fd", ":Telescope lsp_document_symbols<CR>", opts)
+
+keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 keymap("n", "<leader>fr", ":Telescope registers<CR>", opts)
 keymap("n", "<leader>fp", ":Telescope pickers<CR>", opts)
 keymap("n", "<leader>ft", ":Telescope help_tags<CR>", opts)
@@ -120,7 +126,7 @@ keymap("v", "<leader>gl", ":.GBrowse<CR>", noremap)
 keymap("n", "<leader>gc", ":Telescope git_commits<CR>", noremap)
 keymap("n", "<leader>gb", ":Telescope git_branches<CR>", noremap)
 keymap("n", "<leader>gs", ":Telescope git_stash<CR>", noremap)
-keymap("n", "<leader>gf", ":Telescope git_files<CR>", noremap)
+keymap("n", "<leader>gj", ":Telescope git_files<CR>", noremap)
 
 -- Harpoon
 keymap("n", "<leader>he", function() require("harpoon.ui").toggle_quick_menu() end, opts)
