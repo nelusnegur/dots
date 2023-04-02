@@ -101,14 +101,6 @@ keymap("n", "<leader>ft", ":Telescope help_tags<CR>", opts)
 -- File explorer via Telescope
 keymap("n", "<leader>e", ":Telescope file_browser<CR>", noremap)
 
--- Trouble
-keymap("n", "<leader>xx", ":Trouble<CR>", opts)
-keymap("n", "<leader>xw", ":Trouble workspace_diagnostics<CR>", opts)
-keymap("n", "<leader>xd", ":Trouble document_diagnostics<CR>", opts)
-keymap("n", "<leader>xl", ":Trouble loclist<CR>", opts)
-keymap("n", "<leader>xq", ":Trouble quickfix<CR>", opts)
-keymap("n", "gR", ":Trouble lsp_references<CR>", opts)
-
 -- Navigate tabs
 keymap("n", "<leader>ta", ":tabnew<CR>", opts)
 keymap("n", "<leader>tc", ":tabclose<CR>", opts)
