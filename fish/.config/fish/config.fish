@@ -6,7 +6,9 @@ abbr -a k kubectl
 abbr -a g git
 abbr -a gst 'git status'
 abbr -a gd 'git diff'
+abbr -a gdc 'git diff --cached'
 abbr -a glo 'git log --oneline'
+abbr -a glp 'git log -p'
 abbr -a gco 'git checkout'
 abbr -a ga 'git add -p'
 abbr -a gaa 'git add -A'
