@@ -26,7 +26,7 @@ require("rust-tools").setup({
             useParameterNames = false
           },
           expressionAdjustmentHints = {
-            enable = "reborrow" -- available options: always, never, reborrow
+            enable = "never" -- available options: always, never, reborrow
           },
           bindingModeHints = {
             enable = false,
