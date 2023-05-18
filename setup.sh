@@ -5,6 +5,9 @@ set -o pipefail
 set -o nounset
 
 stow alacritty
-stow git
+stow fish
 stow nvim
 stow tmux
+stow git
+stow bin
+stow gdb
