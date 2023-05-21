@@ -7,6 +7,5 @@ require("mason-lspconfig").setup {
     "jsonls",
     "html",
     "cssls",
-    "yamlls"
   },
 }
