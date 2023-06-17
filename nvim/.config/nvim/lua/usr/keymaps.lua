@@ -67,6 +67,9 @@ keymap("n", "<C-k>", ":cp<CR>zz", opts)
 keymap("n", "<leader>co", ":colder<CR>", opts)
 keymap("n", "<leader>cn", ":cnewer<CR>", opts)
 
+keymap("n", "<leader>fi", ":Telescope quickfix<CR>", opts)
+keymap("n", "<leader>fu", ":Telescope quickfixhistory<CR>", opts)
+
 -- Navigate the location list
 keymap("n", "<leader>mj", ":ln<CR>zz", opts)
 keymap("n", "<leader>mk", ":lp<CR>zz", opts)
@@ -86,9 +89,6 @@ keymap("n", "<leader>fj", ":Telescope find_files<CR>", opts)
 keymap("n", "<leader>fh", ":Telescope find_files hidden=true<CR>", opts)
 keymap("n", "<leader>fl", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fk", ":Telescope grep_string<CR>", opts)
-
-keymap("n", "<leader>fi", ":Telescope quickfix<CR>", opts)
-keymap("n", "<leader>fu", ":Telescope quickfixhistory<CR>", opts)
 
 keymap("n", "<leader>f;", ":Telescope lsp_dynamic_workspace_symbols<CR>", opts)
 keymap("n", "<leader>fd", ":Telescope lsp_document_symbols<CR>", opts)

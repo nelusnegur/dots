@@ -52,6 +52,12 @@ require("rust-tools").setup({
             hideNamedConstructor = false
           },
         },
+        imports = {
+          prefix = "crate",
+          granularity = {
+            group = "item"
+          },
+        },
         checkOnSave = {
           command = "clippy",
         },
