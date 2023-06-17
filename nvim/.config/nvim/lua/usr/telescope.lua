@@ -16,6 +16,8 @@ telescope.setup {
         ["<M-m>"] = action_layout.toggle_mirror,
         ["<M-t>"] = action_layout.cycle_layout_next,
         ["<C-f>"] = actions.send_to_qflist,
+        ["<C-j>"] = actions.cycle_history_next,
+        ["<C-k>"] = actions.cycle_history_prev,
       },
       n = {
         ["?"] = actions.which_key,
