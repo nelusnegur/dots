@@ -86,7 +86,7 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig"
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
-  use "WhoIsSethDaniel/lualine-lsp-progress.nvim"
+  use "linrongbin16/lsp-progress.nvim"
   use "lvimuser/lsp-inlayhints.nvim"
 
   -- Treesitter
