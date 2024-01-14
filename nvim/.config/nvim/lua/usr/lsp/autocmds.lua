@@ -1,7 +1,18 @@
+local function new_split_window()
+  vim.cmd('vsplit')
+  local win = vim.api.nvim_get_current_win()
+  local buf = vim.api.nvim_create_buf(true, true)
+  vim.api.nvim_win_set_buf(win, buf)
+end
+
 local function set_lsp_keymaps(bufnr)
   local opts = { noremap = true, silent = true, buffer = bufnr }
 
   vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+  vim.keymap.set("n", "gk", function()
+    vim.lsp.buf.definition()
+    new_split_window()
+  end, opts)
   vim.keymap.set("n", "gr", function() vim.lsp.buf.references() end, opts)
   vim.keymap.set("n", "gi", function() vim.lsp.buf.implementation() end, opts)
   vim.keymap.set("n", "gD", function() vim.lsp.buf.declaration() end, opts)
