@@ -1,6 +1,6 @@
 local handlers = require("usr.lsp.handlers")
 
-require("rust-tools").setup({
+vim.g.rustaceanvim = {
   tools = {
     hover_actions = {
       border = "rounded",
@@ -64,4 +64,4 @@ require("rust-tools").setup({
       },
     },
   }
-})
+}

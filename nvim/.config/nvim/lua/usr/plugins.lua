@@ -107,7 +107,7 @@ return packer.startup(function(use)
   })
 
   -- Rust tools
-  use "simrat39/rust-tools.nvim"
+  use "mrcjkb/rustaceanvim"
 
   -- Scala metals
   use "scalameta/nvim-metals"
