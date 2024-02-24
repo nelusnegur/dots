@@ -100,17 +100,21 @@ return packer.startup(function(use)
   -- Harpoon
   use "ThePrimeagen/harpoon"
 
-  -- Markdown preview
-  use({
-    "iamcco/markdown-preview.nvim",
-    run = function() vim.fn["mkdp#util#install"]() end,
-  })
+  -- Debugger
+  use "mfussenegger/nvim-dap"
+  use "rcarriga/nvim-dap-ui"
 
   -- Rust tools
   use "mrcjkb/rustaceanvim"
 
   -- Scala metals
   use "scalameta/nvim-metals"
+
+  -- Markdown preview
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

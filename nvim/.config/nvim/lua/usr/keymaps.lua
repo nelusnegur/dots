@@ -134,3 +134,6 @@ keymap("n", "<leader>;", function() require("harpoon.ui").nav_file(4) end, opts)
 
 -- Undotree
 keymap("n", "<leader>ut", ':UndotreeShow<CR>', opts)
+
+-- DAP
+keymap("n", "<leader>bu", function() require("dapui").toggle() end, opts)

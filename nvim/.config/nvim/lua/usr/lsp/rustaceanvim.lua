@@ -63,5 +63,13 @@ vim.g.rustaceanvim = {
         },
       },
     },
-  }
+  },
+  dap = {
+    adapter = {
+      type = "executable",
+      command = "lldb",
+      name = "Rust lldb",
+    },
+    autoload_configurations = true
+  },
 }
