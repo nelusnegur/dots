@@ -137,3 +137,6 @@ keymap("n", "<leader>ut", ':UndotreeShow<CR>', opts)
 
 -- DAP
 keymap("n", "<leader>bu", function() require("dapui").toggle() end, opts)
+keymap("n", "<leader>bj", function() require("dap").toggle_breakpoint() end, opts)
+keymap("n", "<leader>bk", function() require("dap").continue() end, opts)
+keymap("n", "<leader>bl", function() require("dap").run_last() end, opts)

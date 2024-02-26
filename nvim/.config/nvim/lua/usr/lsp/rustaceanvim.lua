@@ -67,9 +67,9 @@ vim.g.rustaceanvim = {
   dap = {
     adapter = {
       type = "executable",
-      command = "lldb",
+      command = "lldb-vscode",
       name = "Rust lldb",
     },
-    autoload_configurations = true
+    autoload_configurations = true,
   },
 }
