@@ -1,6 +1,7 @@
 require("usr.globals")
 require("usr.options")
 require("usr.keymaps")
+require("usr.autocmds")
 require("usr.plugins")
 require("usr.colorscheme")
 require("usr.tabline")
