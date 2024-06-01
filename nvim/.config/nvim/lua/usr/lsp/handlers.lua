@@ -3,9 +3,9 @@ local M = {}
 M.setup = function()
   local signs = {
     { name = "DiagnosticSignError", text = "" },
-    { name = "DiagnosticSignWarn",  text = "" },
-    { name = "DiagnosticSignHint",  text = "" },
-    { name = "DiagnosticSignInfo",  text = "" },
+    { name = "DiagnosticSignWarn", text = "" },
+    { name = "DiagnosticSignHint", text = "" },
+    { name = "DiagnosticSignInfo", text = "" },
   }
 
   for _, sign in ipairs(signs) do
@@ -41,6 +41,12 @@ M.setup = function()
   })
 end
 
+local function enable_inlay_hints(client, bufnr)
+  if client.server_capabilities.inlayHintProvider then
+    vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+  end
+end
+
 local function lsp_highlight_document(client)
   if client.server_capabilities.documentHighlightProvider then
     vim.api.nvim_exec(
@@ -56,8 +62,9 @@ local function lsp_highlight_document(client)
   end
 end
 
-M.on_attach = function(client, _)
+M.on_attach = function(client, bufnr)
   lsp_highlight_document(client)
+  enable_inlay_hints(client, bufnr)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
