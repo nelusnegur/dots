@@ -102,7 +102,7 @@ return packer.startup(function(use)
 
   -- Debugger
   use "mfussenegger/nvim-dap"
-  use "rcarriga/nvim-dap-ui"
+  use { "rcarriga/nvim-dap-ui", requires = "nvim-neotest/nvim-nio" }
 
   -- Rust tools
   use "mrcjkb/rustaceanvim"
