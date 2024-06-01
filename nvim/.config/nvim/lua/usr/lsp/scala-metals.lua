@@ -1,16 +1,18 @@
 local metals = require("metals")
 local metals_config = metals.bare_config()
+local handlers = require("usr.lsp.handlers")
 
 metals_config.settings = {
   showImplicitArguments = true,
   showImplicitConversionsAndClasses = true,
   showInferredType = true,
-  excludedPackages = {}
+  excludedPackages = {},
+  testUserInterface = "Text Explorer"
 }
-
-local handlers = require("usr.lsp.handlers")
+metals_config.init_options.statusBarProvider = "on"
 
 metals_config.on_attach = function(client, bufnr)
+  metals.setup_dap()
   handlers.on_attach(client, bufnr)
 end
 
