@@ -58,7 +58,5 @@ end
 
 
 set PATH ~/.local/bin \
-   ~/.cargo/bin \
-   /usr/local/opt/ruby/bin \
-   ~/.gem/ruby/3.0.0/bin $PATH
+   ~/.cargo/bin $PATH
 
