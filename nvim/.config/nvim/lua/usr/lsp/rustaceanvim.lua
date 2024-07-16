@@ -23,7 +23,7 @@ vim.g.rustaceanvim = {
         inlayHints = {
           lifetimeElisionHints = {
             enable = "always",
-            useParameterNames = false
+            useParameterNames = true
           },
           expressionAdjustmentHints = {
             enable = "never" -- available options: always, never, reborrow
