@@ -7,9 +7,14 @@ return {
     },
     opts = {},
     config = function()
+      local lsp_config = require("lspconfig")
       local handlers = require("config.lsp.handlers")
+      local config = {
+        on_attach = handlers.on_attach,
+        capabilities = handlers.capabilities
+      }
 
-      require("lspconfig").lua_ls.setup {
+      lsp_config.lua_ls.setup {
         on_attach = handlers.on_attach,
         capabilities = handlers.capabilities,
         settings = {
@@ -30,30 +35,11 @@ return {
         },
       }
 
-      require("lspconfig").gopls.setup {
-        on_attach = handlers.on_attach,
-        capabilities = handlers.capabilities
-      }
-
-      require("lspconfig").zls.setup {
-        on_attach = handlers.on_attach,
-        capabilities = handlers.capabilities
-      }
-
-      require("lspconfig").clangd.setup {
-        on_attach = handlers.on_attach,
-        capabilities = handlers.capabilities,
-      }
-
-      require("lspconfig").html.setup {
-        on_attach = handlers.on_attach,
-        capabilities = handlers.capabilities,
-      }
-
-      require("lspconfig").cssls.setup {
-        on_attach = handlers.on_attach,
-        capabilities = handlers.capabilities,
-      }
+      lsp_config.gopls.setup(config)
+      lsp_config.zls.setup(config)
+      lsp_config.clangd.setup(config)
+      lsp_config.html.setup(config)
+      lsp_config.cssls.setup(config)
     end
   }
 }
