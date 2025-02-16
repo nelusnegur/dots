@@ -5,7 +5,8 @@ return {
     opts = {
       ensure_installed = {
         "lua_ls",
-        "rust_analyzer",
+        -- The dedicated rust plugin installs it
+        -- "rust_analyzer",
         "zls",
         "clangd",
         "html",
