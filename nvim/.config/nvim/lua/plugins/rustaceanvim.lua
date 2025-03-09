@@ -19,7 +19,7 @@ return {
         server = {
           on_attach = handlers.on_attach,
           capabilities = handlers.capabilities,
-          -- see https://github.com/rust-lang/rust-analyzer/blob/master/docs/user/generated_config.adoc
+          -- see https://github.com/rust-lang/rust-analyzer/blob/master/docs/book/src/configuration_generated.md
           settings = {
             ["rust-analyzer"] = {
               lens = {
@@ -60,6 +60,7 @@ return {
               imports = {
                 prefix = "crate",
                 granularity = {
+                  enforce = true,
                   group = "item"
                 },
               },
