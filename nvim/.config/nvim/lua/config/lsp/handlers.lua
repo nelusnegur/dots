@@ -1,44 +1,26 @@
 local M = {}
 
 M.setup = function()
-  local signs = {
-    { name = "DiagnosticSignError", text = "" },
-    { name = "DiagnosticSignWarn", text = "" },
-    { name = "DiagnosticSignHint", text = "" },
-    { name = "DiagnosticSignInfo", text = "" },
-  }
-
-  for _, sign in ipairs(signs) do
-    vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
-  end
-
   local config = {
-    virtual_text = true,
     signs = {
-      active = signs,
+      text = {
+        [vim.diagnostic.severity.ERROR] = "",
+        [vim.diagnostic.severity.WARN] = "",
+        [vim.diagnostic.severity.INFO] = "",
+        [vim.diagnostic.severity.HINT] = "",
+      }
     },
-    update_in_insert = true,
     underline = true,
+    virtual_text = true,
+    update_in_insert = true,
     severity_sort = true,
     float = {
-      focusable = false,
-      style = "minimal",
+      source = "if_many",
       border = "rounded",
-      source = "always",
-      header = "",
-      prefix = "",
     },
   }
 
   vim.diagnostic.config(config)
-
-  vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-    border = "rounded",
-  })
-
-  vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-    border = "rounded",
-  })
 end
 
 local function enable_inlay_hints(client, bufnr)
@@ -54,6 +36,7 @@ local function lsp_highlight_document(client)
       augroup lsp_document_highlight
         autocmd! * <buffer>
         autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
+        autocmd CursorHoldI <buffer> lua vim.lsp.buf.document_highlight()
         autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
       augroup END
     ]],
