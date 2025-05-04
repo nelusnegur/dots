@@ -11,3 +11,4 @@ stow tmux
 stow git
 stow bin
 stow gdb
+stow aerospace
