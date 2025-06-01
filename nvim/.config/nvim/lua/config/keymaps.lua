@@ -98,6 +98,11 @@ keymap("n", "<leader>fr", ":Telescope registers<CR>", opts)
 keymap("n", "<leader>fp", ":Telescope pickers<CR>", opts)
 keymap("n", "<leader>ft", ":Telescope help_tags<CR>", opts)
 
+-- Metals
+keymap("n", "<leader>mc", function()
+  require("telescope").extensions.metals.commands()
+end, opts)
+
 -- File explorer via Telescope
 keymap("n", "<leader>e", ":Telescope file_browser<CR>", noremap)
 
