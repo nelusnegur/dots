@@ -45,7 +45,17 @@ return {
                 ["d"] = actions.delete_buffer
               }
             }
-          }
+          },
+          live_grep = {
+            additional_args = function(_)
+              return { "--hidden" }
+            end
+          },
+          find_files = {
+            hidden = true,
+            no_ignore = false,
+            no_ignore_parent = false,
+          },
         },
         extensions = {
           ["ui-select"] = {
@@ -60,6 +70,7 @@ return {
             grouped = true,
             hijack_netrw = true,
             layout_config = { height = 0.4 },
+            hidden = { file_browser = true, folder_browser = true },
             mappings = {
               ["i"] = {
                 -- your custom insert mode mappings
