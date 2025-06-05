@@ -50,12 +50,7 @@ return {
             additional_args = function(_)
               return { "--hidden" }
             end
-          },
-          find_files = {
-            hidden = true,
-            no_ignore = false,
-            no_ignore_parent = false,
-          },
+          }
         },
         extensions = {
           ["ui-select"] = {
