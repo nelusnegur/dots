@@ -64,7 +64,8 @@ return {
                   group = "item"
                 },
               },
-              checkOnSave = {
+              checkOnSave = true,
+              check = {
                 command = "clippy",
               },
             },
