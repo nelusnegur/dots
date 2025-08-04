@@ -64,7 +64,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
     alt-f = 'fullscreen'
-    alt-w = 'close'
+    alt-w = 'close --quit-if-last-window'
 
     alt-s = 'mode split'
     alt-r = 'mode resize'
@@ -75,6 +75,7 @@ automatically-unhide-macos-hidden-apps = false
     j = 'resize height +50'
     k = 'resize height -50'
     l = 'resize width +50'
+
     enter = 'mode main'
     esc = 'mode main'
 
@@ -85,10 +86,13 @@ automatically-unhide-macos-hidden-apps = false
   l = ['join-with right', 'mode main']
 
 [mode.service.binding]
-    esc = ['reload-config', 'mode main']
-    r = ['flatten-workspace-tree', 'mode main']
-    f = ['layout floating tiling', 'mode main']
+    r = ['reload-config', 'mode main']
+    l = ['flatten-workspace-tree', 'mode main']
+    t = ['layout floating tiling', 'mode main']
     backspace = ['close-all-windows-but-current', 'mode main']
+
+    esc = 'mode main'
+    enter = 'mode main'
 
     down = 'volume down'
     up = 'volume up'
