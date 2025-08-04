@@ -7,14 +7,19 @@ return {
     },
     opts = {},
     config = function()
-      local lsp_config = require("lspconfig")
       local handlers = require("config.lsp.handlers")
       local config = {
         on_attach = handlers.on_attach,
         capabilities = handlers.capabilities
       }
 
-      lsp_config.lua_ls.setup {
+      local lsps = { "gopls", "zls", "clangd", "html", "cssls" }
+      for _, ls in ipairs(lsps) do
+        vim.lsp.config(ls, config)
+        vim.lsp.enable(ls)
+      end
+
+      vim.lsp.config("lua_ls", {
         on_attach = handlers.on_attach,
         capabilities = handlers.capabilities,
         settings = {
@@ -33,13 +38,8 @@ return {
             },
           },
         },
-      }
-
-      lsp_config.gopls.setup(config)
-      lsp_config.zls.setup(config)
-      lsp_config.clangd.setup(config)
-      lsp_config.html.setup(config)
-      lsp_config.cssls.setup(config)
+      })
+      vim.lsp.enable("lua_ls")
     end
   }
 }
