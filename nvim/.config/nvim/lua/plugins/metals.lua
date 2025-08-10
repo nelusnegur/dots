@@ -7,11 +7,11 @@ return {
       local handlers = require("config.lsp.handlers")
 
       metals_config.settings = {
-        showImplicitArguments = true,
-        showImplicitConversionsAndClasses = true,
-        showInferredType = true,
+        showImplicitArguments = false,
+        showImplicitConversionsAndClasses = false,
+        showInferredType = false,
         excludedPackages = {},
-        testUserInterface = "Text Explorer"
+        testUserInterface = "Test Explorer"
       }
       metals_config.init_options.statusBarProvider = "on"
 
