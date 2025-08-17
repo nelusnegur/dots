@@ -40,6 +40,17 @@ return {
         },
       })
       vim.lsp.enable("lua_ls")
+
+      vim.lsp.config("helm-ls", {
+        settings = {
+          ['helm-ls'] = {
+            yamlls = {
+              path = "yaml-language-server"
+            }
+          }
+        }
+      })
+      vim.lsp.enable("helm-ls")
     end
   }
 }
