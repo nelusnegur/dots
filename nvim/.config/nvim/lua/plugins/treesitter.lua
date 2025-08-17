@@ -26,6 +26,12 @@ return {
     },
     config = function(_, opts)
       require("nvim-treesitter.configs").setup(opts)
+
+      local hocon_group = vim.api.nvim_create_augroup("hocon", { clear = true })
+      vim.api.nvim_create_autocmd(
+        { "BufNewFile", "BufRead" },
+        { group = hocon_group, pattern = "*.conf", command = "set ft=hocon" }
+      )
     end,
   },
   {
