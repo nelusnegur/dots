@@ -141,8 +141,8 @@ keymap("n", "<leader>;", function() require("harpoon.ui").nav_file(4) end, opts)
 keymap("n", "<leader>ut", ':UndotreeShow<CR>', opts)
 
 -- DAP
-keymap("n", "<leader>bu", function() require("dapui").toggle() end, opts)
-keymap("n", "<leader>be", function() require("dapui").elements.watches.add(vim.fn.expand('<cword>')) end, opts)
+keymap("n", "<leader>bu", function() require("dap-view").toggle() end, opts)
+keymap("n", "<leader>be", function() require("dap-view").add_expr(vim.fn.expand('<cword>')) end, opts)
 keymap("n", "<leader>bj", function() require("dap").toggle_breakpoint() end, opts)
 keymap("n", "<leader>bk", function() require("dap").continue() end, opts)
 keymap("n", "<leader>bi", function() require("dap").step_into() end, opts)

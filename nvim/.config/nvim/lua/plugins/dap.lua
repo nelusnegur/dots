@@ -33,11 +33,14 @@ return {
     end,
   },
   {
-    "rcarriga/nvim-dap-ui",
-    dependencies = {
-      "mfussenegger/nvim-dap",
-      "nvim-neotest/nvim-nio"
+    "igorlfs/nvim-dap-view",
+    opts = {
+      windows = {
+        terminal = {
+          hide = { "scala" },
+        },
+        ...
+      },
     },
-    opts = {}
   }
 }
